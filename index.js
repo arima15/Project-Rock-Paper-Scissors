@@ -1,5 +1,3 @@
-var readline = require('readline-sync');
-
 function getComputerChoice()
 {
     const choices = ['rock','paper','scissors'];
@@ -8,7 +6,7 @@ function getComputerChoice()
 }
 
 const getHumanChoice = () => {
-    let choice = readline.question('Enter your choice: ');
+    let choice = prompt('Enter your choice: ');
     return choice.toLowerCase();
 };
 
