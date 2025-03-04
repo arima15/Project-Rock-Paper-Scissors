@@ -1,3 +1,5 @@
+const container = document.querySelector("#container");
+
 function getComputerChoice()
 {
     const choices = ['rock','paper','scissors'];
@@ -48,5 +50,11 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-console.log();
-console.log(Compare(humanScore, computerScore));
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => { 
+    button.addEventListener("click", () => {
+        const human = button.id;
+        const computer = getComputerChoice();
+        console.log(playRound(human,computer));
+    });
+});
