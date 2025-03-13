@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Batman Battle Arena</title>
     <link rel="stylesheet" href="style.css">
-
     <script src="index.js" defer></script>
 </head>
 <body>
     <div id="container">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissor</button>
+        <h1>Batman Battle Arena</h1>
+        <div id="battle-area">
+            <div id="player-side" class="character-side">
+                <div class="character-image" id="player-image"></div>
+            </div>
+            <div id="vs">VS</div>
+            <div id="enemy-side" class="character-side">
+                <div class="character-image" id="enemy-image"></div>
+            </div>
+        </div>
+        <div id="controls">
+            <button id="batman" class="battle-btn">Batman</button>
+            <button id="batarang" class="battle-btn">Batarang</button>
+            <button id="cape" class="battle-btn">Cape</button>
+        </div>
+        <div id="battle-log"></div>
+        <div id="score-container">
+            <div id="score1"></div>
+            <div id="score2"></div>
+        </div>
+        <div id="result"></div>
     </div>
-    
 </body>
 </html>
