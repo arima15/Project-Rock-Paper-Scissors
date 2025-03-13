@@ -44,12 +44,16 @@ h1 {
 }
 
 .character-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     background-color: #333;
     border-radius: 10px;
-    border: 2px solid #ffd700;
+    border: 3px solid #ffd700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
 }
 
 #vs {
@@ -60,9 +64,9 @@ h1 {
 }
 
 .battle-btn {
-    padding: 12px 25px;
-    margin: 10px;
-    font-size: 16px;
+    padding: 15px 30px;
+    margin: 15px;
+    font-size: 20px;
     cursor: pointer;
     border: 2px solid #ffd700;
     border-radius: 5px;
@@ -70,6 +74,7 @@ h1 {
     color: #ffd700;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .battle-btn:hover {
@@ -84,6 +89,7 @@ h1 {
     background-color: rgba(255, 215, 0, 0.1);
     border-radius: 5px;
     min-height: 60px;
+    font-size: 20px;
 }
 
 #score-container {
