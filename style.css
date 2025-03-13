@@ -44,24 +44,24 @@ body {
 /* Player character styles */
 #player {
     display: block;
-    background-image: url(sprites/joker.png);
-    background-position: 0px -80px;
-    height: 80px;
-    width: 70px;
+    background-image: url('sprites/batman.png'); /* Update with correct path */
+    background-position: 0px 0px;
+    height: 120px; /* Adjusted size for better visibility */
+    width: 90px;   /* Adjusted size for better visibility */
     position: absolute;
-    top: 210px;
+    top: 180px;
     left: 15px;
 }
 
 /* Player animations */
 @keyframes player-standing {
-    from { background-position: 0px -80px; }
-    to { background-position: -210px -80px; }
+    from { background-position: 0px 0px; }
+    to { background-position: -560px 0px; } /* Adjust based on sprite sheet */
 }
 
 @keyframes player-take-damage {
-    from { background-position: -280px -560px; }
-    to { background-position: -280px -560px; }
+    from { background-position: 0px -560px; }
+    to { background-position: -280px -560px; } /* Adjust based on sprite sheet */
 }
 
 .animatePlayerHit {
@@ -69,14 +69,14 @@ body {
 }
 
 .animatePlayerStanding {
-    animation: player-standing .5s steps(3) infinite;
+    animation: player-standing 1s steps(8) infinite; /* Adjust duration and steps */
 }
 
 /* Computer character styles */
 #computer {
     display: block;
-    background-image: url(sprites/batman.gif);
-    background-position: 10px 0px;
+    background-image: url('sprites/joker.png'); /* Update with correct path */
+    background-position: 0px 0px;
     height: 120px;
     width: 90px;
     position: absolute;
@@ -85,22 +85,23 @@ body {
     transform: scaleX(-1);
 }
 
+/* Computer animations */
 @keyframes computer-standing {
-    from { background-position-x: 10px; }
-    to { background-position-x: -153px; }
+    from { background-position: 0px 0px; }
+    to { background-position: -320px 0px; } /* Adjust based on sprite sheet */
 }
 
 @keyframes computer-take-damage {
     from { background-position: 0px -630px; }
-    to { background-position: 0px -630px; }
+    to { background-position: -160px -630px; } /* Adjust based on sprite sheet */
 }
 
 .animateComputerStanding {
-    animation: computer-standing .8s steps(2) infinite;
+    animation: computer-standing 1s steps(8) infinite; /* Adjust duration and steps */
 }
 
 .animateComputerHit {
-    animation: computer-take-damage .1s steps(2);
+    animation: computer-take-damage .1s steps(1);
 }
 
 /* Weapon styles */
@@ -114,7 +115,7 @@ body {
 }
 
 #computer-weapon {
-    transform: scale(2) rotateY(180deg);
+    transform: scale(1.5) rotateY(180deg); /* Adjusted size */
     left: 230px;
 }
 
@@ -157,24 +158,25 @@ body {
 
 /* Weapon images */
 .rock-background, .paper-background, .scissors-background {
-    height: 15px;
-    width: 15px;
-    transform: scale(2);
+    height: 20px; /* Adjusted size for better visibility */
+    width: 20px;  /* Adjusted size for better visibility */
+    transform: scale(1.5); /* Adjusted size */
 }
 
 .rock-background {
-    background-image: url(weapons/rock.jpg);
-    background-position: -16px 0;
+    background-image: url('weapons/rock.png'); /* Update with correct path */
+    background-position: center center;
+    background-size: cover;
 }
 
 .paper-background {
-    background-image: url(weapons/book.png);
+    background-image: url('weapons/paper.png'); /* Update with correct path */
     background-position: center center;
     background-size: cover;
 }
 
 .scissors-background {
-    background-image: url(weapons/scissors.png);
+    background-image: url('weapons/scissor.png'); /* Update with correct path */
     background-position: center center;
     background-size: cover;
 }
@@ -246,17 +248,17 @@ body {
 }
 
 .button:nth-child(1) {
-    background-image: url(img/rock.png);
+    background-image: url(img/rock-button.png);
     background-color: rgb(241, 105, 105);
 }
 
 .button:nth-child(2) {
-    background-image: url(img/paper.png);
+    background-image: url(img/paper-button.png);
     background-color: rgb(146, 146, 254);
 }
 
 .button:nth-child(3) {
-    background-image: url(img/scissors.png);
+    background-image: url(img/scissor-button.png);
     background-color: rgb(104, 241, 104);
 }
 
